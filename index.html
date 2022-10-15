@@ -13074,6 +13074,242 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">%%</span><span class="n">shell</span>
+<span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">Milestone_1</span><span class="o">.</span><span class="n">ipynb</span>
+
+<span class="c1"># only for converting to .html</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[NbConvertApp] WARNING | pattern &#39;/content/Milestone_1.ipynb&#39; matched no files
+This application is used to convert notebook files (*.ipynb)
+        to various other formats.
+
+        WARNING: THE COMMANDLINE INTERFACE MAY CHANGE IN FUTURE RELEASES.
+
+Options
+=======
+The options below are convenience aliases to configurable class-options,
+as listed in the &#34;Equivalent to&#34; description-line of the aliases.
+To see all configurable class-options for some &lt;cmd&gt;, use:
+    &lt;cmd&gt; --help-all
+
+--debug
+    set log level to logging.DEBUG (maximize logging output)
+    Equivalent to: [--Application.log_level=10]
+--show-config
+    Show the application&#39;s configuration (human-readable format)
+    Equivalent to: [--Application.show_config=True]
+--show-config-json
+    Show the application&#39;s configuration (json format)
+    Equivalent to: [--Application.show_config_json=True]
+--generate-config
+    generate default config file
+    Equivalent to: [--JupyterApp.generate_config=True]
+-y
+    Answer yes to any questions instead of prompting.
+    Equivalent to: [--JupyterApp.answer_yes=True]
+--execute
+    Execute the notebook prior to export.
+    Equivalent to: [--ExecutePreprocessor.enabled=True]
+--allow-errors
+    Continue notebook execution even if one of the cells throws an error and include the error message in the cell output (the default behaviour is to abort conversion). This flag is only relevant if &#39;--execute&#39; was specified, too.
+    Equivalent to: [--ExecutePreprocessor.allow_errors=True]
+--stdin
+    read a single notebook file from stdin. Write the resulting notebook with default basename &#39;notebook.*&#39;
+    Equivalent to: [--NbConvertApp.from_stdin=True]
+--stdout
+    Write notebook output to stdout instead of files.
+    Equivalent to: [--NbConvertApp.writer_class=StdoutWriter]
+--inplace
+    Run nbconvert in place, overwriting the existing notebook (only 
+            relevant when converting to notebook format)
+    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory=]
+--clear-output
+    Clear output of current file and save in place, 
+            overwriting the existing notebook.
+    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --ClearOutputPreprocessor.enabled=True]
+--no-prompt
+    Exclude input and output prompts from converted document.
+    Equivalent to: [--TemplateExporter.exclude_input_prompt=True --TemplateExporter.exclude_output_prompt=True]
+--no-input
+    Exclude input cells and output prompts from converted document. 
+            This mode is ideal for generating code-free reports.
+    Equivalent to: [--TemplateExporter.exclude_output_prompt=True --TemplateExporter.exclude_input=True]
+--log-level=&lt;Enum&gt;
+    Set the log level by value or name.
+    Choices: any of [0, 10, 20, 30, 40, 50, &#39;DEBUG&#39;, &#39;INFO&#39;, &#39;WARN&#39;, &#39;ERROR&#39;, &#39;CRITICAL&#39;]
+    Default: 30
+    Equivalent to: [--Application.log_level]
+--config=&lt;Unicode&gt;
+    Full path of a config file.
+    Default: &#39;&#39;
+    Equivalent to: [--JupyterApp.config_file]
+--to=&lt;Unicode&gt;
+    The export format to be used, either one of the built-in formats
+            [&#39;asciidoc&#39;, &#39;custom&#39;, &#39;html&#39;, &#39;latex&#39;, &#39;markdown&#39;, &#39;notebook&#39;, &#39;pdf&#39;, &#39;python&#39;, &#39;rst&#39;, &#39;script&#39;, &#39;slides&#39;]
+            or a dotted object name that represents the import path for an
+            `Exporter` class
+    Default: &#39;html&#39;
+    Equivalent to: [--NbConvertApp.export_format]
+--template=&lt;Unicode&gt;
+    Name of the template file to use
+    Default: &#39;&#39;
+    Equivalent to: [--TemplateExporter.template_file]
+--writer=&lt;DottedObjectName&gt;
+    Writer class used to write the 
+                                        results of the conversion
+    Default: &#39;FilesWriter&#39;
+    Equivalent to: [--NbConvertApp.writer_class]
+--post=&lt;DottedOrNone&gt;
+    PostProcessor class used to write the
+                                        results of the conversion
+    Default: &#39;&#39;
+    Equivalent to: [--NbConvertApp.postprocessor_class]
+--output=&lt;Unicode&gt;
+    overwrite base name use for output files.
+                can only be used when converting one notebook at a time.
+    Default: &#39;&#39;
+    Equivalent to: [--NbConvertApp.output_base]
+--output-dir=&lt;Unicode&gt;
+    Directory to write output(s) to. Defaults
+                                  to output to the directory of each notebook. To recover
+                                  previous default behaviour (outputting to the current 
+                                  working directory) use . as the flag value.
+    Default: &#39;&#39;
+    Equivalent to: [--FilesWriter.build_directory]
+--reveal-prefix=&lt;Unicode&gt;
+    The URL prefix for reveal.js (version 3.x).
+            This defaults to the reveal CDN, but can be any url pointing to a copy 
+            of reveal.js. 
+            For speaker notes to work, this must be a relative path to a local 
+            copy of reveal.js: e.g., &#34;reveal.js&#34;.
+            If a relative path is given, it must be a subdirectory of the
+            current directory (from which the server is run).
+            See the usage documentation
+            (https://nbconvert.readthedocs.io/en/latest/usage.html#reveal-js-html-slideshow)
+            for more details.
+    Default: &#39;&#39;
+    Equivalent to: [--SlidesExporter.reveal_url_prefix]
+--nbformat=&lt;Enum&gt;
+    The nbformat version to write.
+            Use this to downgrade notebooks.
+    Choices: any of [1, 2, 3, 4]
+    Default: 4
+    Equivalent to: [--NotebookExporter.nbformat_version]
+
+Examples
+--------
+
+    The simplest way to use nbconvert is
+
+            &gt; jupyter nbconvert mynotebook.ipynb
+
+            which will convert mynotebook.ipynb to the default format (probably HTML).
+
+            You can specify the export format with `--to`.
+            Options include [&#39;asciidoc&#39;, &#39;custom&#39;, &#39;html&#39;, &#39;latex&#39;, &#39;markdown&#39;, &#39;notebook&#39;, &#39;pdf&#39;, &#39;python&#39;, &#39;rst&#39;, &#39;script&#39;, &#39;slides&#39;].
+
+            &gt; jupyter nbconvert --to latex mynotebook.ipynb
+
+            Both HTML and LaTeX support multiple output templates. LaTeX includes
+            &#39;base&#39;, &#39;article&#39; and &#39;report&#39;.  HTML includes &#39;basic&#39; and &#39;full&#39;. You
+            can specify the flavor of the format used.
+
+            &gt; jupyter nbconvert --to html --template basic mynotebook.ipynb
+
+            You can also pipe the output to stdout, rather than a file
+
+            &gt; jupyter nbconvert mynotebook.ipynb --stdout
+
+            PDF is generated via latex
+
+            &gt; jupyter nbconvert mynotebook.ipynb --to pdf
+
+            You can get (and serve) a Reveal.js-powered slideshow
+
+            &gt; jupyter nbconvert myslides.ipynb --to slides --post serve
+
+            Multiple notebooks can be given at the command line in a couple of 
+            different ways:
+
+            &gt; jupyter nbconvert notebook*.ipynb
+            &gt; jupyter nbconvert notebook1.ipynb notebook2.ipynb
+
+            or you can specify the notebooks list in a config file, containing::
+
+                c.NbConvertApp.notebooks = [&#34;my_notebook.ipynb&#34;]
+
+            &gt; jupyter nbconvert --config mycfg.py
+
+To see all available configurables, use `--help-all`.
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-624683e63740&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;shell&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;jupyter nbconvert --to html /content/Milestone_1.ipynb\n\n# only for converting to .html\n&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2357</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2358</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 2359</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2360</span>             <span class="ansi-green-fg">return</span> result
+<span class="ansi-green-intense-fg ansi-bold">   2361</span> 
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/google/colab/_system_commands.py</span> in <span class="ansi-cyan-fg">_shell_cell_magic</span><span class="ansi-blue-fg">(args, cmd)</span>
+<span class="ansi-green-intense-fg ansi-bold">    107</span>   result <span class="ansi-blue-fg">=</span> _run_command<span class="ansi-blue-fg">(</span>cmd<span class="ansi-blue-fg">,</span> clear_streamed_output<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    108</span>   <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> parsed_args<span class="ansi-blue-fg">.</span>ignore_errors<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 109</span><span class="ansi-red-fg">     </span>result<span class="ansi-blue-fg">.</span>check_returncode<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    110</span>   <span class="ansi-green-fg">return</span> result
+<span class="ansi-green-intense-fg ansi-bold">    111</span> 
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/google/colab/_system_commands.py</span> in <span class="ansi-cyan-fg">check_returncode</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    133</span>     <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    134</span>       raise subprocess.CalledProcessError(
+<span class="ansi-green-fg">--&gt; 135</span><span class="ansi-red-fg">           returncode=self.returncode, cmd=self.args, output=self.output)
+</span><span class="ansi-green-intense-fg ansi-bold">    136</span> 
+<span class="ansi-green-intense-fg ansi-bold">    137</span>   <span class="ansi-green-fg">def</span> _repr_pretty_<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cycle<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>  <span class="ansi-red-fg"># pylint:disable=unused-argument</span>
+
+<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;jupyter nbconvert --to html /content/Milestone_1.ipynb
+
+# only for converting to .html
+&#39; returned non-zero exit status 255.</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13086,7 +13322,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Project-Goals">Project Goals<a class="anchor-link" href="#Project-Goals">&#182;</a></h1><p>COMPLETE ME</p>
+<h1 id="Project-Dataset">Project Dataset<a class="anchor-link" href="#Project-Dataset">&#182;</a></h1><p>The dataset we have chosen is School Shootings since Columbine. This data set features data collected by The Washington Post. This data is collected through multiple sources such as: Nexis, news articles, open-source databases, law enforcement reports, information from school websites, and calls to schools and police departments. In order for the shooting to have been included in this database it must have taken place on campus immediately before, during, or right after classes took place. This database excludes colleges and universities. This dataset is critical because it involves the loss of innocent lives and can give us insightful knowledge to bring awareness to this unimaginable terror. We would like to examine the frequencies, demographics, and trends of this data. The data set includes information such as the school name, district ID and name, date and time of shooting, location, school type, enrollment, count of victims, and information about the shooter and their weapon. Further information of this data set can be found <a href="https://github.com/washingtonpost/data-school-shootings.git">here</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Project-Goals">Project Goals<a class="anchor-link" href="#Project-Goals">&#182;</a></h1><p>Utilizing this dataset, we hope to bring further awareness to such horrendous events. In other words, by analyzing this data efficiently we can better understand how school shootings take place, how they unfold, the demographics and trends of the data, and more. These observations can prove critical to inferring answers to questions that can save lives in the future. For example, what areas are higher risk to school shootings?</p>
 
 </div>
 </div>
@@ -13099,23 +13343,17 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Project-Dataset">Project Dataset<a class="anchor-link" href="#Project-Dataset">&#182;</a></h1><p>The dataset we have chosen is School Shootings since Columbine. This data set features data collected by The Washington Post. This data is collected through multiple sources such as: Nexis, news articles, open-source databases, law enforcement reports, information from school websites, and calls to schools and police departments. In order for the shooting to have been included in this database it must have taken place on campus immediately before, during, or right after classes took place. This database excludes colleges and universities. This dataset is critical because it involves the loss of innocent lives and can give us insightful knowledge to bring awareness to this unimaginable terror. We would like to examine the frequencies, demographics, and trends of this data. The data set includes information such as the school name, district ID and name, date and time of shooting, location, school type, enrollment, count of victims, and information about the shooter and their weapon. Further information of this data set can be found <a href="https://github.com/washingtonpost/data-school-shootings.git">here</a></p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_rows&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;display.max_columns&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </pre></div>
 
@@ -13126,7 +13364,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">shootings_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/washingtonpost/data-school-shootings/master/school-shootings-data.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">)</span>
@@ -13140,7 +13378,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">shootings_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13156,13 +13394,13 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[110]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-  <div id="df-84f1d8d8-a4dc-4169-9b6b-e1abe4a8c85b">
+  <div id="df-46cc083d-3ac1-4113-9387-a021d655a8e5">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -13549,7 +13787,7 @@ div#notebook {
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-84f1d8d8-a4dc-4169-9b6b-e1abe4a8c85b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-46cc083d-3ac1-4113-9387-a021d655a8e5')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -13600,12 +13838,12 @@ div#notebook {
 
       <script>
         const buttonEl =
-          document.querySelector('#df-84f1d8d8-a4dc-4169-9b6b-e1abe4a8c85b button.colab-df-convert');
+          document.querySelector('#df-46cc083d-3ac1-4113-9387-a021d655a8e5 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-84f1d8d8-a4dc-4169-9b6b-e1abe4a8c85b');
+          const element = document.querySelector('#df-46cc083d-3ac1-4113-9387-a021d655a8e5');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -13643,7 +13881,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">shootings_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;nces_school_id&#39;</span><span class="p">,</span> <span class="s1">&#39;nces_district_id&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">,</span> <span class="s1">&#39;state_fips&#39;</span><span class="p">,</span> <span class="s1">&#39;county_fips&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13664,7 +13902,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">shootings_df</span><span class="o">.</span><span class="n">dtypes</span>
@@ -13680,7 +13918,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[112]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13740,7 +13978,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Making sure categorical variables are classified correctly.</span>
@@ -13761,7 +13999,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[113]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -13821,11 +14059,11 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Tidied up version of the table</span>
-<span class="n">shootings_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">shootings_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13838,13 +14076,13 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[114]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-  <div id="df-aef9a35c-074f-4508-aff5-07d238dfd6c4">
+  <div id="df-f77bbae9-0cae-4ae3-8118-017834ea5e39">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -14186,10 +14424,240 @@ dtype: object</pre>
       <td>Suffolk County</td>
       <td>11.0</td>
     </tr>
+    <tr>
+      <th>6</th>
+      <td>Deming Middle School</td>
+      <td>Deming Public Schools</td>
+      <td>11/19/1999</td>
+      <td>1999-2000</td>
+      <td>1999</td>
+      <td>12:45 PM</td>
+      <td>Friday</td>
+      <td>Deming</td>
+      <td>New Mexico</td>
+      <td>public</td>
+      <td>753.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>accidental or targeted</td>
+      <td>12.0</td>
+      <td>m</td>
+      <td>h</td>
+      <td>student</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>nan</td>
+      <td>NaN</td>
+      <td>160.0</td>
+      <td>6.0</td>
+      <td>583.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>.22-caliber Colt revolver</td>
+      <td>home</td>
+      <td>44.0</td>
+      <td>6</td>
+      <td>7</td>
+      <td>502.0</td>
+      <td>Luna County</td>
+      <td>33.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Fort Gibson Middle School</td>
+      <td>Fort Gibson</td>
+      <td>12/6/1999</td>
+      <td>1999-2000</td>
+      <td>1999</td>
+      <td>7:45 AM</td>
+      <td>Monday</td>
+      <td>Fort Gibson</td>
+      <td>Oklahoma</td>
+      <td>public</td>
+      <td>407.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>indiscriminate</td>
+      <td>13.0</td>
+      <td>m</td>
+      <td>ai</td>
+      <td>student</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>nan</td>
+      <td>NaN</td>
+      <td>239.0</td>
+      <td>3.0</td>
+      <td>12.0</td>
+      <td>0.0</td>
+      <td>153.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>Taurus 9mm pistol</td>
+      <td>father</td>
+      <td>25.4</td>
+      <td>6</td>
+      <td>8</td>
+      <td>146.0</td>
+      <td>Muskogee County</td>
+      <td>32.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Ridgewood High School</td>
+      <td>Pasco</td>
+      <td>1/19/2000</td>
+      <td>1999-2000</td>
+      <td>2000</td>
+      <td>3:00 PM</td>
+      <td>Wednesday</td>
+      <td>New Port Richey</td>
+      <td>Florida</td>
+      <td>public</td>
+      <td>1852.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>accidental</td>
+      <td>16.0</td>
+      <td>m</td>
+      <td>w</td>
+      <td>student</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>nan</td>
+      <td>NaN</td>
+      <td>1697.0</td>
+      <td>28.0</td>
+      <td>96.0</td>
+      <td>26.0</td>
+      <td>5.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>.22-caliber Magnum handgun</td>
+      <td>stolen</td>
+      <td>85.0</td>
+      <td>9</td>
+      <td>12</td>
+      <td>654.0</td>
+      <td>Pasco County</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Alicia Reyes Elementary School</td>
+      <td>Merced City Elementary</td>
+      <td>1/26/2000</td>
+      <td>1999-2000</td>
+      <td>2000</td>
+      <td>8:34 AM</td>
+      <td>Wednesday</td>
+      <td>Merced</td>
+      <td>California</td>
+      <td>public</td>
+      <td>734.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>targeted</td>
+      <td>13.0</td>
+      <td>m</td>
+      <td>NaN</td>
+      <td>no connection</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>nan</td>
+      <td>NaN</td>
+      <td>82.0</td>
+      <td>40.0</td>
+      <td>389.0</td>
+      <td>222.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>.22 caliber revolver</td>
+      <td>NaN</td>
+      <td>36.0</td>
+      <td>KG</td>
+      <td>5</td>
+      <td>643.0</td>
+      <td>Merced County</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Duke Ellington Elementary School</td>
+      <td>City of Chicago School District 299</td>
+      <td>2/14/2000</td>
+      <td>1999-2000</td>
+      <td>2000</td>
+      <td>NaN</td>
+      <td>Monday</td>
+      <td>Chicago</td>
+      <td>Illinois</td>
+      <td>public</td>
+      <td>736.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>accidental</td>
+      <td>11.0</td>
+      <td>m</td>
+      <td>NaN</td>
+      <td>student</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>nan</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>736.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>37.0</td>
+      <td>PK</td>
+      <td>6</td>
+      <td>NaN</td>
+      <td>Cook County</td>
+      <td>11.0</td>
+    </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-aef9a35c-074f-4508-aff5-07d238dfd6c4')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f77bbae9-0cae-4ae3-8118-017834ea5e39')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -14240,12 +14708,12 @@ dtype: object</pre>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-aef9a35c-074f-4508-aff5-07d238dfd6c4 button.colab-df-convert');
+          document.querySelector('#df-f77bbae9-0cae-4ae3-8118-017834ea5e39 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-aef9a35c-074f-4508-aff5-07d238dfd6c4');
+          const element = document.querySelector('#df-f77bbae9-0cae-4ae3-8118-017834ea5e39');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -14272,6 +14740,145 @@ dtype: object</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="EDA">EDA<a class="anchor-link" href="#EDA">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">shootings_per_year</span> <span class="o">=</span> <span class="n">shootings_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> 
+<span class="n">shootings_per_year</span> <span class="o">=</span> <span class="n">shootings_per_year</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">shootings_per_year</span> <span class="o">=</span> <span class="n">shootings_per_year</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">shootings_per_year</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Shootings&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[54]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f087e3dc890&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The above graph maps the number of shootings recorded per year. This trend shows an overall increase in shootings with the largest spike taking place in 2021 (42 shootings). The lowest amount of shootings took place in 2002 (5 shootings). This is an extremely significant observation because it shows how there is an upward trend in the number of shootings per year. Therefore, this means that this is a growing issue that needs to be addressed immediately and has yet to be properly resolved.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">free_lunch</span> <span class="o">=</span> <span class="n">shootings_df</span><span class="p">[[</span><span class="s1">&#39;school_name&#39;</span><span class="p">,</span><span class="s1">&#39;lunch&#39;</span><span class="p">,</span><span class="s1">&#39;enrollment&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;pct&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;lunch&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;enrollment&#39;</span><span class="p">]</span>
+<span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;pct&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">range_1</span> <span class="o">=</span> <span class="n">free_lunch</span><span class="p">[</span><span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;pct&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mf">0.25</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">range_2</span> <span class="o">=</span> <span class="n">free_lunch</span><span class="p">[(</span><span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;pct&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.25</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;pct&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mf">0.50</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">range_3</span> <span class="o">=</span> <span class="n">free_lunch</span><span class="p">[(</span><span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;pct&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.50</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;pct&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mf">0.75</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">range_4</span> <span class="o">=</span> <span class="n">free_lunch</span><span class="p">[(</span><span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;pct&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.75</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">free_lunch</span><span class="p">[</span><span class="s1">&#39;pct&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mf">1.0</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">range_1</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;0-25%&#39;</span>
+<span class="n">range_2</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;25-50%&#39;</span>
+<span class="n">range_3</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;50-75%&#39;</span>
+<span class="n">range_4</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;75-100%&#39;</span>
+
+<span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0-25%&#39;</span><span class="p">,</span> <span class="s1">&#39;25-50%&#39;</span><span class="p">,</span> <span class="s1">&#39;50-75%&#39;</span><span class="p">,</span> <span class="s1">&#39;75-100%&#39;</span><span class="p">]</span>
+<span class="n">grouped_ranges</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">range_1</span><span class="p">,</span> <span class="n">range_2</span><span class="p">,</span> <span class="n">range_3</span><span class="p">,</span> <span class="n">range_4</span><span class="p">])</span>
+<span class="n">ranges_counts</span> <span class="o">=</span> <span class="n">grouped_ranges</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">ranges_counts</span> <span class="o">=</span> <span class="n">ranges_counts</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+<span class="n">ranges_counts</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Shootings&#39;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Free Lunch Students&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f968fe284d0&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The above bar graph shows the correlation between the percentage of Students who received free lunches due to financial reasons and the number of shootings. The percentage of students receiving free lunch was calculated in regards to that school's enrollment. From analzying the graph, it is evident that as the number of students who are receiving free lunches at the school increases, the number of shootings increase as well. Typically, free lunches are given to students on a financial need basis. This leads to the question of if there are more students struggling financially at a school, is there a higher probability of a shooting taking place on that campus? This observation is important because it can inform others to focus resourcees on low-income schools to help prevent school shootings.</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
